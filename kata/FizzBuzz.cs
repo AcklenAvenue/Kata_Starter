@@ -12,9 +12,11 @@ namespace kata
 
             foreach (var number in numbers)
             {
-                if (Convert.ToInt32(number) % 3 == 0)
+                if (Convert.ToInt32(number)%3 == 0)
+                {
                     result += "Fizz" + " ";
-                else if (number == "5")
+                }
+                else if (Convert.ToInt32(number)%5 == 0)
                 {
                     result += "Buzz" + " ";
                 }

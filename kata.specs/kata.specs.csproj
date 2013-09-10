@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="given_a_fizzbuzz_context.cs" />
+    <Compile Include="when_sending_12_13_14_16_17.cs" />
     <Compile Include="when_sending_1_2_3.cs" />
     <Compile Include="when_sending_3.cs" />
     <Compile Include="when_sending_3_4_5.cs" />
