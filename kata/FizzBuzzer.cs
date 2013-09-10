@@ -6,9 +6,15 @@ namespace kata
 {
     public class FizzBuzzer
     {
-        public string Calculate(List<int> i)
+        public string Calculate(List<int> numbers)
         {
-            return i.First().Equals(3) ? "Fizz" : i.First().Equals(5) ? "Buzz" : i.First().ToString(CultureInfo.InvariantCulture);
+            var returnValue = "";
+            foreach (var number in numbers)
+            {
+                returnValue += number % 3 == 0 ? "Fizz" : number % 5 == 0 ? "Buzz" : number.ToString(CultureInfo.InvariantCulture);
+                returnValue += " ";
+            }
+            return returnValue.Remove(returnValue.Length - 1);
         }
     }
 }
