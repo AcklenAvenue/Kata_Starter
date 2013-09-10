@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace kata
 {
@@ -11,7 +12,7 @@ namespace kata
 
             foreach (var number in numbers)
             {
-                if (number == "3")
+                if (Convert.ToInt32(number) % 3 == 0)
                     result += "Fizz" + " ";
                 else if (number == "5")
                 {
