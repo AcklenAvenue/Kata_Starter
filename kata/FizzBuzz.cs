@@ -13,6 +13,10 @@ namespace kata
             {
                 if (number == "3")
                     result += "Fizz" + " ";
+                else if (number == "5")
+                {
+                    result += "Buzz" + " ";
+                }
                 else
                 {
                     result += number + " ";
