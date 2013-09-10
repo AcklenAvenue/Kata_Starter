@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="when_calculating_value_for_1.cs" />
     <Compile Include="when_calculating_value_for_3.cs" />
     <Compile Include="given_a_fizzbuzz_controller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
