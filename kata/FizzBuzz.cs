@@ -1,11 +1,25 @@
-﻿namespace kata
+﻿using System.Collections.Generic;
+
+namespace kata
 {
     public class FizzBuzz
     {
         public string Send(string values)
         {
-            if (values == "3") return "Fizz";
-            return "1";
+            string[] numbers = values.Split('_');
+            string result = string.Empty;
+
+            foreach (var number in numbers)
+            {
+                if (number == "3")
+                    result += "Fizz" + " ";
+                else
+                {
+                    result += number + " ";
+                }
+            }
+
+            return result.Trim();
         }
     }
 }
