@@ -12,7 +12,7 @@ namespace kata
 
             foreach (var number in numbers)
             {
-                if (Convert.ToInt32(number)%3 == 0)
+                if (Convert.ToInt32(number)%3 == 0 || number.Contains("3"))
                 {
                     result += "Fizz" + " ";
                 }
