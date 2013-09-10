@@ -1,22 +1,14 @@
-﻿namespace kata
+﻿using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+
+namespace kata
 {
     public class FizzBuzzer
     {
-        //dice javier que esta funcioncita es fea :(
-        public string CalculateAll()
+        public string Calculate(List<int> i)
         {
-            var returnValue = "";
-            for (int i = 1; i <= 100; i++)
-               returnValue += Calculate(i);
-            return returnValue;
-        }
-
-        public string Calculate(int i)
-        {
-            if (i.Equals(3))
-                return "Fizz";
-
-            return "Buzz";
+            return i.First().Equals(3) ? "Fizz" : i.First().Equals(5) ? "Buzz" : i.First().ToString(CultureInfo.InvariantCulture);
         }
     }
 }
