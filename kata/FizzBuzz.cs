@@ -16,7 +16,7 @@ namespace kata
                 {
                     result += "Fizz" + " ";
                 }
-                else if (Convert.ToInt32(number)%5 == 0)
+                else if (Convert.ToInt32(number) % 5 == 0 || number.Contains("5"))
                 {
                     result += "Buzz" + " ";
                 }
