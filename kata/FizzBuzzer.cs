@@ -11,7 +11,7 @@ namespace kata
             var returnValue = "";
             foreach (var number in numbers)
             {
-                returnValue += number % 3 == 0 ? "Fizz" : number % 5 == 0 ? "Buzz" : number.ToString(CultureInfo.InvariantCulture);
+                returnValue += (number % 3 == 0 && number % 5 == 0) ? "FizzBuzz": number % 3 == 0 ? "Fizz" : number % 5 == 0 ? "Buzz" : number.ToString(CultureInfo.InvariantCulture);
                 returnValue += " ";
             }
             return returnValue.Remove(returnValue.Length - 1);
