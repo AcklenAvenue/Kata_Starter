@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="when_sending_3.cs" />
     <Compile Include="when_send_1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
