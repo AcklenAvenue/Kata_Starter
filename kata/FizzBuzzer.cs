@@ -4,7 +4,7 @@
     {
         public string Calculate(int i)
         {
-            return "";
+            return "Fizz";
         }
     }
 }
