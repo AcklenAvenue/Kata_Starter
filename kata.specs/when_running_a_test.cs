@@ -2,13 +2,9 @@
 
 namespace kata.specs
 {
-    public class when_sending_1
+    public class when_sending_1 : given_a_fizz_buzz_context
     {
-        static FizzBuzz _fizzBuzz;
         static string _result;
-
-        Establish context =
-            () => { _fizzBuzz = new FizzBuzz(); };
 
         Because of =
             () => _result = _fizzBuzz.Send(1);
