@@ -4,7 +4,7 @@
     {
         public string Calculate(int number)
         {
-            return "fizz";
+            return number == 3 ? "fizz" : "buzz";
         }
     }
 }

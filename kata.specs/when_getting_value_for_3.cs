@@ -6,36 +6,12 @@ using Machine.Specifications;
 
 namespace kata.specs
 {
-    public class when_getting_value_for_3
+    public class when_getting_value_for_3 :given_a_fizzbuzzer_context
     {
-        Establish context =
-            () =>
-                {
-                    _fizzBuzzer = new FizzBuzzer();
-                };
-
         Because of =
             () => _result = _fizzBuzzer.Calculate(3);
 
         It should_return_fizz =
             () => _result.ShouldEqual("fizz");
-
-        static FizzBuzzer _fizzBuzzer;
-        static string _result;
-    }
-
-    public class when_getting_value_for_5
-    {
-        Establish context =
-            () => { _fizzBuzzer = new FizzBuzzer(); };
-
-        Because of =
-            () => _result = _fizzBuzzer.Calculate(5);
-
-        It should_do_something =
-            () => _result.ShouldEqual("buzz");
-
-        static FizzBuzzer _fizzBuzzer;
-        static string _result;
     }
 }
