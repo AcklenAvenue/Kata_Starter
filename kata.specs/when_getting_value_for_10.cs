@@ -7,7 +7,7 @@ namespace kata.specs
         Because of =
             () => _result = _fizzBuzzer.Calculate(10);
 
-        It should_do_something =
+        It should_return_buzz =
             () => _result.ShouldEqual("buzz");
     }
 }
