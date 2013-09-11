@@ -50,6 +50,7 @@
     <Compile Include="when_sending_3.cs" />
     <Compile Include="when_sending_4.cs" />
     <Compile Include="when_sending_5.cs" />
+    <Compile Include="when_sending_9.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\kata\kata.csproj">
