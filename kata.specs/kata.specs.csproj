@@ -48,6 +48,7 @@
     <Compile Include="when_getting_value_for_1.cs" />
     <Compile Include="when_getting_value_for_3.cs" />
     <Compile Include="when_getting_value_for_5.cs" />
+    <Compile Include="when_getting_value_for_6.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\kata\kata.csproj">
