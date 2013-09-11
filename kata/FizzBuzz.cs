@@ -2,9 +2,10 @@
 {
     public class FizzBuzz
     {
-        public string Send(int values)
+        public string Send(int value)
         {
-            if (values == 2)
+            if (value == 3) return "Fizz";
+            if (value == 2)
             {
                 return "2";
             }

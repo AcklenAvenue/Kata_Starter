@@ -48,6 +48,7 @@
     <Compile Include="when_running_a_test.cs" />
     <Compile Include="when_sending_2.cs" />
     <Compile Include="when_sending_3.cs" />
+    <Compile Include="when_sending_5.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\kata\kata.csproj">
