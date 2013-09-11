@@ -9,7 +9,7 @@ namespace kata.specs
         Because of =
             () => _result = _fizzBuzz.Send(4);
 
-        It should_return_Buzz =
+        It should_return_4 =
             () => _result.ShouldEqual("4");
     }
 }
