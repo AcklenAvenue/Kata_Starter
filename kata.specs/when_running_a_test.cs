@@ -2,14 +2,18 @@
 
 namespace kata.specs
 {
-    public class when_running_a_test
+    public class when_sending_1
     {
+        static FizzBuzz _fizzBuzz;
         static string _result;
 
-        Because of =
-            () => _result = "hello".ToUpper();
+        Establish context =
+            () => { _fizzBuzz = new FizzBuzz(); };
 
-        It should_pass =
-            () => _result.ShouldEqual("HELLO");
+        Because of =
+            () => _result = _fizzBuzz.Send(1);
+
+        It should_return_1 =
+            () => _result.ShouldEqual("1");
     }
 }
