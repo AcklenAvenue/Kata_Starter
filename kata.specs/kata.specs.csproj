@@ -46,6 +46,7 @@
     <Compile Include="given_a_fizzbuzzer_context.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="when_getting_value_for_1.cs" />
+    <Compile Include="when_getting_value_for_10.cs" />
     <Compile Include="when_getting_value_for_3.cs" />
     <Compile Include="when_getting_value_for_5.cs" />
     <Compile Include="when_getting_value_for_6.cs" />
