@@ -46,6 +46,7 @@
     <Compile Include="given_a_fizz_buzz_context.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="when_running_a_test.cs" />
+    <Compile Include="when_sending_10.cs" />
     <Compile Include="when_sending_2.cs" />
     <Compile Include="when_sending_3.cs" />
     <Compile Include="when_sending_4.cs" />
