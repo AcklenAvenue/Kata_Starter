@@ -4,7 +4,7 @@ namespace kata
     {
         public string GetValue(int i)
         {
-            return "0";
+            return "1";
         }
     }
 }
