@@ -48,6 +48,7 @@
     <Compile Include="when_fizzbuzzing_a_2.cs" />
     <Compile Include="when_fizzbuzzing_a_3.cs" />
     <Compile Include="when_fizzbuzzing_a_4.cs" />
+    <Compile Include="when_fizzbuzzing_a_5.cs" />
     <Compile Include="when_fizz_buzzing_1.cs" />
     <Compile Include="when_running_a_test.cs" />
   </ItemGroup>
