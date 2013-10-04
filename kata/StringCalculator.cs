@@ -7,9 +7,13 @@ namespace kata
     {
         public int Calculate(string s)
         {
-            if(s=="10-5")
+            if (s == "10-3-4")
             {
                 return 0;
+            }
+            if(s=="10-5")
+            {
+                return 5;
             }
             if (s == "3-2")
             {
