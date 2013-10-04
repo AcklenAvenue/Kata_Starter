@@ -2,13 +2,9 @@ using Machine.Specifications;
 
 namespace kata.specs
 {
-    public class when_adding_1_and_2
+    public class when_adding_1_and_2 : given_a_string_calculator_context
     {
-        static StringCalculator _calculator;
         static object _result;
-
-        Establish context =
-            () => { _calculator = new StringCalculator(); };
 
         Because of =
             () => _result = _calculator.Calculate("1+2");
