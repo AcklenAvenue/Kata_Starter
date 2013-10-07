@@ -15,7 +15,7 @@ namespace kata
                 }
             }else
             {
-                return 0;
+                result = 3;
             }
             return result;
         }
