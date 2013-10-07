@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="when_running_a_test.cs" />
+    <Compile Include="when_string_is_empty.cs" />
     <Compile Include="when_sum_1_1.cs" />
   </ItemGroup>
   <ItemGroup>
