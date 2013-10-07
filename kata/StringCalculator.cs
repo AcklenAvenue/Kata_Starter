@@ -1,13 +1,17 @@
+using System;
+using System.Linq;
+
 namespace kata
 {
     public class StringCalculator  
     {
         public int Calculate(string s)
         {
-            if (s == "3+7")
-                return 10;
+            if (s.Contains("-"))
+                return 0;
+            var numbers = s.Split('+');
 
-            return 9;
+            return numbers.Sum(number => Convert.ToInt32(number));
         }
     }
 }
