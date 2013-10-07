@@ -50,6 +50,7 @@
     <Compile Include="when_substracting_1_from_2.cs" />
     <Compile Include="when_sum_1_1.cs" />
     <Compile Include="when_sum_1_2_4.cs" />
+    <Compile Include="when_sum_and_subtracting_2_3_5_2.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\kata\kata.csproj">
