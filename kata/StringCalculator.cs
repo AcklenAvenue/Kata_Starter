@@ -7,13 +7,17 @@ namespace kata
     {
         public int Calculate(string s)
         {
-            
-
             if (s.Contains("-"))
             {
-                if (s == "10-5") return 5;
+                if (s.Contains("+")) return 0;
 
-                return  3;
+                var numberToSubtract = s.Split('-').Select(x => Convert.ToInt32(x)).ToArray();
+                var result = numberToSubtract.First();
+                for (int i = 1; i < numberToSubtract.Count(); i++)
+                {
+                    result -= numberToSubtract[i];
+                }
+                return result;
             }
             var numbers = s.Split('+');
 
