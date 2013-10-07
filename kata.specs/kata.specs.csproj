@@ -47,6 +47,7 @@
     <Compile Include="when_adding_multiple_numbers.cs" />
     <Compile Include="when_adding_two_numbers.cs" />
     <Compile Include="when_running_a_test.cs" />
+    <Compile Include="when_substracting_two_number.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\kata\kata.csproj">
