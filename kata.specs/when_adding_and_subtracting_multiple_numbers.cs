@@ -10,6 +10,6 @@ namespace kata.specs
             () => _result = _calculator.Calculate("10+20-5+4-1");
 
         It should_return_the_sum =
-            () => _result.ShouldEqual(8);
+            () => _result.ShouldEqual(28);
     }
 }

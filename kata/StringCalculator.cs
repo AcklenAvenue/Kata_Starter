@@ -7,15 +7,20 @@ namespace kata
     {
         public int Calculate(string s)
         {
-            if (s == "10+20-5+4-1")
-                return 0;
-
-            if (s.Contains("-"))
-            {
-                return Restar(s);
-            }            
             var numbers = s.Split('+');
-            return numbers.Sum(x => Convert.ToInt32(x)); ;
+            var totalSum = 0;
+            foreach (var number in numbers)
+            {
+                if (number.Contains("-"))
+                {
+                    totalSum += Restar(number);
+                }
+                else
+                {
+                    totalSum += Convert.ToInt32(number);
+                }
+            }
+            return totalSum;
         }
 
         static int Restar(string s)
