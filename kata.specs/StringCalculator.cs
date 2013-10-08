@@ -7,11 +7,18 @@ namespace kata.specs
     {
         public int Calculate(string s)
         {
-            if (s == "23-5")
-                return 18;
+            if (s.Contains("-") && s.Contains("+"))
+                return 0;
 
             if (s.Contains("-"))
-                return 5;
+            {
+                var valuesSplitedByMinus = s.Split('-');
+                var result = Convert.ToInt32(valuesSplitedByMinus.First());
+                for (int i = 1; i < valuesSplitedByMinus.Length; i++)
+                    result -= Convert.ToInt32(valuesSplitedByMinus[i]);
+
+                return result;
+            }
 
             var values = s.Split('+').Select(x => Convert.ToInt32(x));
             return values.Sum();
