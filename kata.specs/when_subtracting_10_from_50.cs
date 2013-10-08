@@ -10,6 +10,6 @@ namespace kata.specs
             () => _result = _stringCalculator.Calculate("50-10");
 
         It should_return_40 =
-            () => _result.ShouldEqual(50);
+            () => _result.ShouldEqual(40);
     }
 }
