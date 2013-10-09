@@ -2,16 +2,12 @@
 
 namespace kata.specs
 {
-    public class when_sum_1_2
+    public class when_sum_1_2 : given_a_string_calcultor_context
     {
-        static StringCalculator _stringCalculator;
         static int _result;
 
-        Establish context =
-            () => { _stringCalculator = new StringCalculator(); };
-
         Because of =
-            () => _result = _stringCalculator.Calculate("1+2");
+            () => _result = StringCalculator.Calculate("1+2");
 
         It should_return_3 =
             () => _result.ShouldEqual(3);
