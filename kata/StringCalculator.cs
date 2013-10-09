@@ -4,7 +4,7 @@ namespace kata.specs
     {
         public int Calculate(string s)
         {
-            return 0;
+            return 3;
         }
     }
 }

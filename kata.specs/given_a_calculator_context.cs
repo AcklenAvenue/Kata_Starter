@@ -6,5 +6,6 @@ namespace kata.specs
     {
         Establish context = () => { _calculator = new StringCalculator(); };
         protected static StringCalculator _calculator;
+        protected static int _result;
     }
 }

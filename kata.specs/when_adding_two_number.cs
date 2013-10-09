@@ -7,6 +7,5 @@ namespace kata.specs
         Because of = () => _result = _calculator.Calculate("2+1");
 
         It should_return_the_correct_result = () => _result.ShouldEqual(3);
-        static int _result;
     }
 }
