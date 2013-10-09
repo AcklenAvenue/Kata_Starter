@@ -1,12 +1,14 @@
+using System;
+using System.Linq;
+
 namespace kata
 {
     public class StringCalculator
     {
         public int Calculate(string s)
         {
-            if (s.Contains("5+6"))
-                return 11;
-            return 7;
+            if (s.Contains("-")) return 0;
+            return s.Split('+').Sum(x => Convert.ToInt32(x));
         }
     }
 }
