@@ -1,5 +1,6 @@
 ﻿using Machine.Specifications;
 
+
 namespace kata.specs
 {
     public class when_adding_2_4
