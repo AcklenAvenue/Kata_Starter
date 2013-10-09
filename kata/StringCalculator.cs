@@ -7,9 +7,23 @@ namespace kata
     {
         public int Calculate(string s)
         {
-            if (s == "6-3") return 3;
-            if (s.Contains("-")) return 5;
-            return s.Split('+').Sum(x => Convert.ToInt32(x));
+            var result = 0;
+            if(s.Contains('-') && s.Contains('+'))
+                return 0;
+            if (s.Contains("-"))
+            {
+                
+                var substract = s.Split('-');
+                result = Convert.ToInt32(substract[0]);
+                for (int i = 1; i < substract.Length; i++)
+                {
+                    result -= Convert.ToInt32(substract[i]);
+                }
+            }else
+            {
+                result = s.Split('+').Sum(x => Convert.ToInt32(x));
+            }
+            return result;
         }
     }
 }
