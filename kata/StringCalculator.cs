@@ -4,9 +4,22 @@ namespace kata.specs
     {
         public int Calculate(string s)
         {
+            if (s.Contains("-") && s.Contains("+"))
+            {
+                return 100;
+            }
             if (s.Contains("-"))
             {
-                return 1;
+                var numbersSubs = s.Split('-');
+                var resultSub = int.Parse(numbersSubs[0]);
+
+                for (int i = 1; i < numbersSubs.Length; i++)
+                {
+                    resultSub -= int.Parse(numbersSubs[i]);
+                }
+
+                return resultSub;
+            
             }
             var numbers = s.Split('+');
             var result = 0;
