@@ -7,22 +7,39 @@ namespace kata
     {
         public int Calculate(string s)
         {
-            if (s == "10+20-5-10+15") return 0;
-            if (s.Contains("-"))
+            string[] numbers = s.Split('+');
+            int resultado = 0;
+            foreach (string number in numbers)
             {
-                var subtractValues = s.Split('-');
-                var total = Convert.ToInt32(subtractValues.First());
-
-                for (var i = 1; i < subtractValues.Length; i++)
+                if (s.Contains("-"))
                 {
-                    total -= Convert.ToInt32(subtractValues[i]);
+                    resultado += Subtract(number);
                 }
-                return total;
+                else
+                {
+                    resultado += Add(number);
+                }
             }
 
-            var numbers = s.Split('+');
+            return resultado;
+        }
+
+        static int Subtract(string s)
+        {
+            string[] subtractValues = s.Split('-');
+            int total = Convert.ToInt32(subtractValues.First());
+
+            for (int i = 1; i < subtractValues.Length; i++)
+            {
+                total -= Convert.ToInt32(subtractValues[i]);
+            }
+            return total;
+        }
+
+        static int Add(string s)
+        {
+            string[] numbers = s.Split('+');
             return numbers.Sum(number => Convert.ToInt32(number));
-            
         }
     }
 }
