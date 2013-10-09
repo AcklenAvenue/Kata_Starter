@@ -6,11 +6,18 @@ namespace kata
     {
         public int Calculate(string s)
         {
-            if (s.Contains("60-50"))
-                return 10;
-            if (s == "10-5") return 5;
             if (s.Contains("-"))
-                return 0;
+            {
+                if (s.Contains("+")) return 0;
+
+                var numbersFromSubtract = s.Split('-');
+                var resultFromSubtract = Convert.ToInt32(numbersFromSubtract[0]);
+                for (int i = 1; i < numbersFromSubtract.Length; i++)
+                {
+                    resultFromSubtract -= Convert.ToInt32(numbersFromSubtract[i]);
+                }
+                return resultFromSubtract;
+            }
             var n = s.Split('+');
             var sum = 0;
             for (int i = 0; i < n.Length; i++)
