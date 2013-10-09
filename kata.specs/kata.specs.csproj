@@ -47,6 +47,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="when_running_a_test.cs" />
     <Compile Include="when_subtract_10_from_20.cs" />
+    <Compile Include="when_subtract_1_and_2_from_5.cs" />
     <Compile Include="when_subtract_5_from_10.cs" />
     <Compile Include="when_sum_1_2.cs" />
     <Compile Include="when_sum_1_2_3.cs" />
