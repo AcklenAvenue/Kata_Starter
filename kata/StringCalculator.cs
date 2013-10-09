@@ -21,15 +21,7 @@ namespace kata
                 }
             }
             return result;
-
             
-
-
-                
-
-                return Subtract(s);
-            
-            return Add(s);
         }
 
         static int Subtract(string s)
