@@ -1,0 +1,6 @@
+namespace kata
+{
+    class Objectobla
+    {
+    }
+}
