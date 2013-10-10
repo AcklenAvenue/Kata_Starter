@@ -4,10 +4,22 @@ namespace kata.specs
     {
         public int Calculate(string s)
         {
-            if(s.Contains("-") && s.Contains("+"))
+            var result = 0;
+            if (s.Contains("-") && s.Contains("+"))
             {
-                return -10123091;
+                var number = s.Split('+');
+                var sub = number[0];
+                var numsub = sub.Split('-');
+                var first = int.Parse(numsub[0]);
+                for (int i = 1; i < numsub.Length; i++)
+                {
+                    first -= int.Parse(numsub[i]);
+                }
+
+                result = first + int.Parse(number[1]);
+                return result;
             }
+
             if (s.Contains("-"))
             {
                 var numbersSub = s.Split('-');
@@ -19,13 +31,16 @@ namespace kata.specs
                 return resultSub;
             }
             var numbers = s.Split('+');
-            var result = 0;
             foreach (var number in numbers)
             {
                 result += int.Parse(number);
             }
 
             return result;
+
+
+          
         }
+
     }
 }
