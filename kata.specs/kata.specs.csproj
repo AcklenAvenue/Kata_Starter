@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class10.cs" />
     <Compile Include="CuandoSumaDeDosNumeros.cs" />
     <Compile Include="cuando_resta_6_y_2.cs" />
     <Compile Include="dado_un_contexto_de_calculadora.cs" />
