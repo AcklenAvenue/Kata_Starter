@@ -1,13 +1,21 @@
+using System;
+
 namespace kata
 {
     public class StringCalculator
     {
         public int Calculate(string cadena)
         {
-            if (cadena == "3+6")
-                return 9;
+            if(cadena.Contains("-"))
+                return 0;
 
-            return 0;
+            var sumandos = cadena.Split('+');
+            var suma = 0;
+            foreach (var sumando in sumandos)
+            {
+                suma += Convert.ToInt32(sumando);
+            }
+            return suma;
         }
     }
 }
