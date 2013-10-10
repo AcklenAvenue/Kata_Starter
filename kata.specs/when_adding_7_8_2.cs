@@ -11,6 +11,4 @@ namespace kata.specs
         It should_return_17 =
             () => _result.ShouldEqual(17);
     }
-
-
 }

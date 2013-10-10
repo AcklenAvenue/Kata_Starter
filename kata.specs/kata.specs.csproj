@@ -46,6 +46,7 @@
     <Compile Include="given_a_calculator_context.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="when_adding_7_8_2.cs" />
+    <Compile Include="when_adding_and_subs_multiple_random_numbers.cs" />
     <Compile Include="when_adding_two_numbers.cs" />
     <Compile Include="when_running_a_test.cs" />
     <Compile Include="when_substracting_two_numbers.cs" />
