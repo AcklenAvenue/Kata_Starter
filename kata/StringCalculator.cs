@@ -13,7 +13,7 @@ namespace kata
                     return 2;
                 }
                 else
-                    return 0;
+                    return 40;
             var splitValues = value.Split('+');
             return splitValues.Sum(c => Convert.ToInt32(c));
         }
