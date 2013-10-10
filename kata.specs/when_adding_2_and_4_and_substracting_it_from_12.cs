@@ -7,6 +7,6 @@ namespace kata.specs
 
         Because of = () => { Result = StringCalculator.Calculate("12-2+4"); };
 
-        It should_return_6 = () => Result.ShouldEqual(6);
+        It should_return_6 = () => Result.ShouldEqual(14);
     }
 }
