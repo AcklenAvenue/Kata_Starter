@@ -49,6 +49,7 @@
     <Compile Include="when_adding_5_and_6.cs" />
     <Compile Include="when_adding_two_numbers.cs" />
     <Compile Include="when_running_a_test.cs" />
+    <Compile Include="when_subtracting_4_from_8.cs" />
     <Compile Include="when_subtracting_5_from_10.cs" />
   </ItemGroup>
   <ItemGroup>
