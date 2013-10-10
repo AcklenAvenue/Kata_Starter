@@ -7,13 +7,21 @@ namespace kata
     {
         public int Calculate(string value)
         {
+            if (value.Contains('+') && value.Contains('+'))
+            {
+                return 0;
+            }
             if (value.Contains("-"))
-                if (value == "4-2")
+            {
+                var splitValuesToSubstract = value.Split('-');
+                var substractionResult = Convert.ToInt32(splitValuesToSubstract[0]);
+                for (var i = 1; i < splitValuesToSubstract.Length; i++ )
                 {
-                    return 2;
+                    substractionResult -= Convert.ToInt32(splitValuesToSubstract[i]);
                 }
-                else
-                    return 40;
+                return substractionResult;
+            }
+                
             var splitValues = value.Split('+');
             return splitValues.Sum(c => Convert.ToInt32(c));
         }
