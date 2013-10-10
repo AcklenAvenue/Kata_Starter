@@ -7,7 +7,15 @@ namespace kata.specs
     {
         public int Calculate(string s)
         {
-            if (s.Contains("-")) return 2;
+            if (s.Contains("-"))
+            {
+                var r = s.Split('-');
+                var total = Convert.ToInt32(r.First());
+
+                
+                return total - Convert.ToInt32(r[1]);
+            };
+
             var v = s.Split('+');
             return v.Sum(x => Convert.ToInt32(x));
         }
