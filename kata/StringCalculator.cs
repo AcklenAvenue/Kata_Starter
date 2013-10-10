@@ -7,7 +7,7 @@ namespace kata
     {
         public int Calculate(string value)
         {
-            if (value.Contains('+') && value.Contains('+'))
+            if (value.Contains('+') && value.Contains('-'))
             {
                 return 0;
             }
