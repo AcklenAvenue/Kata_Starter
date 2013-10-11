@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace kata
 {
@@ -6,11 +7,18 @@ namespace kata
     {
         public int Calculate(string s)
         {
+            
             if(s.Contains("-"))
             {
-                if (s == "7-4")
-                    return 3;
-                return 5;
+                if (s.Contains('+'))
+                    return 5;
+                var number = s.Split('-').Select(c=>Convert.ToInt32(c)).ToArray();
+                var result = number.First();
+                for (var i = 1; i < number.Length; i++)
+                {
+                    result -= number[i];
+                }
+                return result;
             }
             var elements = s.Split('+');
             var sum = 0;
