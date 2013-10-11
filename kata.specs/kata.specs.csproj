@@ -50,6 +50,7 @@
     <Compile Include="when_adding_5_and_101.cs" />
     <Compile Include="when_running_a_test.cs" />
     <Compile Include="when_substracting_100_from_200.cs" />
+    <Compile Include="when_subtracting_100_and_50_from_300.cs" />
     <Compile Include="when_subtracting_5_from_7.cs" />
   </ItemGroup>
   <ItemGroup>
