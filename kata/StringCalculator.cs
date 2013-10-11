@@ -7,11 +7,17 @@ namespace kata
     {
         public int Calculate(string s)
         {
+            if (s.Contains("-") && s.Contains("+"))
+                return 0;
             if (s.Contains("-"))
             {
                 var Nums = s.Split('-');
                 var total = Convert.ToInt32(Nums.First());
-                return total - Convert.ToInt32(Nums[1]);
+                for (int i = 1; i < Nums.Length; i++)
+                {
+                    total -= Convert.ToInt32(Nums[i]);
+                }
+                return total;
             }
             return s.Split('+').Sum(value => Convert.ToInt32(value));
         }
