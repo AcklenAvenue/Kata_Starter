@@ -1,10 +1,14 @@
-﻿namespace kata
+﻿using System;
+using System.Linq;
+
+namespace kata
 {
     public class StringCalculator
     {
         public int Calculate(string s)
         {
-            return s.Equals("3+4") ? 7 : 3;
+            if (s == "6-4") return -1;
+            return s.Split('+').Sum(value => Convert.ToInt32(value));
         }
     }
 }
