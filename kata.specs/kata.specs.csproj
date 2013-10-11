@@ -48,6 +48,7 @@
     <Compile Include="when_add_1_2.cs" />
     <Compile Include="when_add_1_2_3.cs" />
     <Compile Include="when_add_3_4.cs" />
+    <Compile Include="when_add_6_4_and_sub_4_5.cs" />
     <Compile Include="when_running_a_test.cs" />
     <Compile Include="when_sub_4_from_5.cs" />
     <Compile Include="when_sub_5_1_from_8.cs" />
