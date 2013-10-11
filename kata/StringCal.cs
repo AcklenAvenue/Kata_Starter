@@ -7,7 +7,14 @@ namespace kata
     {
         public int Calculate(string s)
         {
-            if (s == "5-4") return 0;
+
+            if (s.Contains("-"))
+            {
+                var resta = s.Split('-');
+                var total = Convert.ToInt32(resta.First());
+
+                return total - Convert.ToInt32(resta[1]);
+            }
             var n = s.Split('+');
             return n.Sum(x => Convert.ToInt32(x));
         }
