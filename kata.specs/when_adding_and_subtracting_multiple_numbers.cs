@@ -10,6 +10,6 @@ namespace kata.specs
             () => _result = _stringCalculator.Calculate("-5+6-10+100-1000");
 
         It should_return_the_sum_of_all =
-            () => _result.ShouldEqual(909);
+            () => _result.ShouldEqual(-909);
     }
 }
