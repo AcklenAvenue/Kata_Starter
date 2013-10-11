@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="given_calculator_context.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="when_adding_1_and_2.cs" />
+    <Compile Include="when_adding_1_and_2_and_3.cs" />
     <Compile Include="when_adding_3_4.cs" />
     <Compile Include="when_running_a_test.cs" />
   </ItemGroup>
