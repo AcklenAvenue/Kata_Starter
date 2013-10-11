@@ -48,6 +48,7 @@
     <Compile Include="when_adding_10_and_5_and_1.cs" />
     <Compile Include="when_adding_3_and_4.cs" />
     <Compile Include="when_adding_5_and_101.cs" />
+    <Compile Include="when_adding_and_subtracting_multiple_numbers.cs" />
     <Compile Include="when_running_a_test.cs" />
     <Compile Include="when_substracting_100_from_200.cs" />
     <Compile Include="when_subtracting_100_and_50_from_300.cs" />
