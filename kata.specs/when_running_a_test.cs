@@ -2,14 +2,15 @@
 
 namespace kata.specs
 {
-    public class when_running_a_test
+    public class when_adding_2_and_3
     {
-        static string _result;
+        static StringCalculator _stringCalculator;
+        static int _result;
 
-        Because of =
-            () => _result = "hello".ToUpper();
+        Establish context = () => { _stringCalculator = new StringCalculator(); };
 
-        It should_pass =
-            () => _result.ShouldEqual("HELLO");
+        Because of = () => { _result = _stringCalculator.Calculate("2+3"); };
+
+        It should_return_5 = () => { _result.ShouldEqual(5); };
     }
 }
