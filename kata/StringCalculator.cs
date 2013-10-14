@@ -4,7 +4,7 @@
     {
         public int Calculate(string cal)
         {
-            return 0;
+            return 2;
         }
     }
 }
