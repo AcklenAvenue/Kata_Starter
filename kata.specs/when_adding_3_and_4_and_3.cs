@@ -9,4 +9,7 @@ namespace kata.specs
 
         It should_should = () => Result.ShouldEqual(10);
     }
+
+    
+
 }

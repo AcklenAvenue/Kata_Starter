@@ -11,7 +11,8 @@ namespace kata
         {
             if (s.Contains("-"))
             {
-                return s == "2-1" ? 1 : 0;
+                var minus = s.Split('-');
+                return int.Parse(minus[0]) - int.Parse(minus[1]);
             }
 
             var numbers = s.Split('+');
