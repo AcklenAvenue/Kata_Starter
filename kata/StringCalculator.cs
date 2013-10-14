@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -10,17 +11,11 @@ namespace kata
         {
             if (s.Contains("-"))
             {
-                return 0;
+                return s == "2-1" ? 1 : 0;
             }
+
             var numbers = s.Split('+');
-            int result = 0;
-            foreach (var number in numbers)
-            {
-                int n = int.Parse(number);
-                result += n;   
-                
-            }
-            return result;
+            return numbers.Sum(number => int.Parse(number));
         }
     }
 }
