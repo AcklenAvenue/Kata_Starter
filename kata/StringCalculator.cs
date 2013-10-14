@@ -11,7 +11,7 @@ namespace kata
         {
             if (s.Contains("+") && s.Contains("-"))
             {
-                return 0;
+                return 11;
             }
             if (s.Contains("-"))
             {
