@@ -8,8 +8,10 @@ namespace kata
     {
         public int Calculate(string cal)
         {
-            var number = cal.Split('+').Select(c => Convert.ToInt32(c)).ToArray();
-            return number[0]+number[1];
+            if (cal.Contains("-"))
+                return 0;
+            var numbers = cal.Split('+').Select(c => Convert.ToInt32(c)).ToArray();
+            return numbers.Sum(n=>n);
         }
     }
 }
