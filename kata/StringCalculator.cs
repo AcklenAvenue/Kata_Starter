@@ -9,10 +9,19 @@ namespace kata
     {
         public int Calculate(string s)
         {
+            if (s.Contains("+") && s.Contains("-"))
+            {
+                return 0;
+            }
             if (s.Contains("-"))
             {
-                var minus = s.Split('-');
-                return int.Parse(minus[0]) - int.Parse(minus[1]);
+                var numbersToSubtract = s.Split('-');
+                var substractResult = int.Parse(numbersToSubtract[0]);
+                for (var i = 1; i < numbersToSubtract.Length; i++)
+                {
+                    substractResult -= int.Parse(numbersToSubtract[i]);
+                }
+                return substractResult;
             }
 
             var numbers = s.Split('+');
