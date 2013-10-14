@@ -13,4 +13,18 @@ namespace kata.specs
 
         It should_return_5 = () => { _result.ShouldEqual(5); };
     }
+
+    public class when_adding_4_and_5        
+    {
+        private Establish context = () =>
+        {  stringCalculator = new StringCalculator(); };
+
+        private Because of = () => { result = stringCalculator.Calculate("4+5"); };
+
+        It should_should = () => { result.ShouldEqual(10); };
+        private static StringCalculator stringCalculator;
+        private static int result;
+    }
+
+
 }
