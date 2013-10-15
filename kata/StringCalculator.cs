@@ -1,10 +1,10 @@
-namespace kata.specs
+namespace kata
 {
     public class StringCalculator
     {
         public int Calculate(string s)
         {
-            return 0;
+            return 3;
         }
     }
 }

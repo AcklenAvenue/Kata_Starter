@@ -44,9 +44,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StringCalculator.cs" />
+    <Compile Include="when_adding_multiple_numbers.cs" />
     <Compile Include="when_adding_two_numbers.cs" />
+    <Compile Include="given_a_string_calculator_context.cs" />
     <Compile Include="when_running_a_test.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\kata\kata.csproj">
+      <Project>{259B3652-2DBD-4DE0-86FE-A537164ADA61}</Project>
+      <Name>kata</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
