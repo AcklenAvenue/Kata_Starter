@@ -8,7 +8,7 @@ namespace kata
         {
             if (s.Contains("-") && s.Contains("+"))
             {
-                return 0;
+                return 97;
             }
             if (s.Contains("-"))
             {

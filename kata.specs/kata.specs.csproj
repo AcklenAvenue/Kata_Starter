@@ -48,6 +48,7 @@
     <Compile Include="when_adding_two_numbers.cs" />
     <Compile Include="given_a_string_calculator_context.cs" />
     <Compile Include="when_running_a_test.cs" />
+    <Compile Include="when_subctracting_10_from_20_and_adding_2.cs" />
     <Compile Include="when_sub_and_adding_number.cs" />
     <Compile Include="when_sub_three_numbers.cs" />
     <Compile Include="when_sub_two_numbers.cs" />
