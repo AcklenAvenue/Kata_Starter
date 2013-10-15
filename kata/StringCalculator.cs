@@ -8,23 +8,38 @@ namespace kata
     {
         public int Calculate(string cal)
         {
-            if (cal.Contains("-") && cal.Contains("+"))
-                return 0;
-
-            if (cal.Contains("-"))
+            var nums = cal.Split('+');
+            var result = 0;
+            foreach (var num in nums)
             {
-                var mierda = cal.Split('-');
-                var result = Convert.ToInt32(mierda.First());
-                for (int i = 1; i < mierda.Length; i++)
+                if (num.Contains("-"))
                 {
-                    result -= Convert.ToInt32(mierda[i]);
+                    result += Subtract(num);
                 }
-                return result;
-            }
-            
+                else
+                {
+                    result += Add(num);
+                }
                 
+            }
+            return result;
+        }
+
+        static int Add(string cal)
+        {
             var numbers = cal.Split('+').Select(c => Convert.ToInt32(c)).ToArray();
-            return numbers.Sum(n=>n);
+            return numbers.Sum(n => n);
+        }
+
+        static int Subtract(string cal)
+        {
+            var mierda = cal.Split('-');
+            var result = Convert.ToInt32(mierda.First());
+            for (int i = 1; i < mierda.Length; i++)
+            {
+                result -= Convert.ToInt32(mierda[i]);
+            }
+            return result;
         }
     }
 }
