@@ -13,13 +13,7 @@ namespace kata
             {
                 if (value.Contains("-"))
                 {
-                    var subsVals = value.Split('-');
-                    var result = Convert.ToInt32(subsVals.First());
-                    for (int i = 1; i < subsVals.Length; i++)
-                    {
-                        result -= Convert.ToInt32(subsVals[i]);
-                    }
-                    total += result;
+                    total = Substraction(value, total);
                 }
                 else
                 {
@@ -27,6 +21,18 @@ namespace kata
                 }
             }
 
+            return total;
+        }
+
+        static int Substraction(string value, int total)
+        {
+            var subsVals = value.Split('-');
+            var result = Convert.ToInt32(subsVals.First());
+            for (int i = 1; i < subsVals.Length; i++)
+            {
+                result -= Convert.ToInt32(subsVals[i]);
+            }
+            total += result;
             return total;
         }
     }
