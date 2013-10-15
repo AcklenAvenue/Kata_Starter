@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace kata
 {
@@ -8,7 +9,8 @@ namespace kata
         {
             if (s.Contains("-") && s.Contains("+"))
             {
-                return 97;
+                var items = Regex.Split(s, @"([+|-][0-9]+)");
+                return items.Where(item => !item.Equals("")).Sum(item => int.Parse(item));
             }
             if (s.Contains("-"))
             {
