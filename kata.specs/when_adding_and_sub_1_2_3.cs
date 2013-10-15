@@ -8,6 +8,6 @@ namespace kata.specs
 
         Because of = () => _result = _calculator.Calculate("1-2+3");
 
-        It should_return_the_correct_result = () => _result.ShouldEqual(4);
+        It should_return_the_correct_result = () => _result.ShouldEqual(2);
     }
 }
