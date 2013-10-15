@@ -7,8 +7,12 @@ namespace kata
     {
         public int Calculate(string s)
         {
-            if (s == "6-3") return 0;
-            if (s == "4-2") return 2;
+            if (s.Contains("-"))
+            {
+                var subsVals = s.Split('-');
+                var result = Convert.ToInt32(subsVals.First());
+                return result - Convert.ToInt32(subsVals[1]);
+            }
             return s.Split('+').Sum(x => Convert.ToInt32(x));
         }
     }
