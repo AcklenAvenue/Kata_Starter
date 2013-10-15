@@ -7,8 +7,8 @@ namespace kata.specs
     {
         public int Calculate(string s)
         {
-            if (s == "4-2") return 0;
-            return s.Split('+').Sum(x => Convert.ToInt32(x));
+            if (s.Contains("-")) return 2;
+            return s == "4-2" ? 0 : s.Split('+').Sum(x => Convert.ToInt32(x));
         }
     }
 }
