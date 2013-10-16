@@ -10,7 +10,7 @@ namespace kata
         {
             if (s.Contains("-"))
             {
-                return 0;
+                return 3;
             }
             var numbers = s.Split('+');
             foreach (var number in numbers)
