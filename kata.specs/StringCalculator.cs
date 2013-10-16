@@ -8,7 +8,7 @@ namespace kata.specs
         {
             if (s.Contains("-"))
             {
-                return 0;
+                return -1;
             }
             var numbers = s.Split('+');
 
