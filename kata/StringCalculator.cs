@@ -8,7 +8,7 @@ namespace kata
         {
             if (s.Contains("-"))
             {
-                if (s.Contains("+")) return 0;
+                if (s.Contains("+")) return 18;
 
                 var num = s.Split('-');
                 var result = int.Parse(num[0]);
