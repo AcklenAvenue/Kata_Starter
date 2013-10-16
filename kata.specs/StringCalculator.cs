@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace kata.specs
 {
@@ -7,6 +8,12 @@ namespace kata.specs
     {
         public int Calculate(string s)
         {
+            if (s.Contains("-") && s.Contains("+"))
+            {
+                var item = Regex.Split(s, @"([+|-][0-9]+)");
+                var total = item.Where(s1 => !s1.Equals("")).Sum(s1 => int.Parse(s1));
+                return total;
+            }
             if (s.Contains("-"))
             {
                 var subsValues = s.Split('-');

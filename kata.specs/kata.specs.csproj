@@ -48,7 +48,9 @@
     <Compile Include="StringCalculator.cs" />
     <Compile Include="when_adding_1_and_2.cs" />
     <Compile Include="when_adding_2_3.cs" />
+    <Compile Include="when_add_10_20_and_subtract_15.cs" />
     <Compile Include="when_running_a_test.cs" />
+    <Compile Include="when_substracting_2_from_3.cs" />
     <Compile Include="when_subs_2_numbers.cs" />
     <Compile Include="when_subs_multiple_numbers.cs" />
   </ItemGroup>
