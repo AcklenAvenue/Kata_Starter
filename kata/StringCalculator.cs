@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace kata
 {
@@ -10,7 +11,9 @@ namespace kata
         {
             if (s.Contains("-"))
             {
-                return 3;
+                var numbersToSubtract = s.Split('-');
+                _result = Convert.ToInt32(numbersToSubtract.First()) - Convert.ToInt32(numbersToSubtract[1]);
+                return _result;
             }
             var numbers = s.Split('+');
             foreach (var number in numbers)
