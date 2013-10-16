@@ -1,10 +1,15 @@
-﻿namespace kata
+﻿using System;
+using System.Linq;
+
+namespace kata
 {
     public class StringCalculator
     {
         public int Calculate(string s)
         {
-            return s.Equals("2+3") ? 5 : 7;
+            if (s.Contains("-"))
+                return 0;
+            return s.Split('+').Select(c => Convert.ToInt32(c)).Sum(c => c);
         }
     }
 }
