@@ -9,9 +9,15 @@ namespace kata
         {
             if (s.Contains("-"))
             {
-                if (s == "12-6")
-                    return 6;
-                return 7;
+                if (s.Contains("+"))
+                    return 0;
+                var numbers = s.Split('-');
+                var result = Convert.ToInt32(numbers.First());
+                for (int i = 1; i < numbers.Length; i++)
+                {
+                    result -= Convert.ToInt32(numbers[i]);
+                }
+                return result;
             }
             return s.Split('+').Select(c => Convert.ToInt32(c)).Sum(c => c);
         }
