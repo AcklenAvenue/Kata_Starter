@@ -6,14 +6,17 @@ namespace kata
     {
         public int Calculate(string s)
         {
-            if (s == "10-5") return 5;
-            
-            if (s == "2+2")
-                return 4;
             if (s.Contains("-"))
             {
+                if (s.Contains("+")) return 0;
+
                 var num = s.Split('-');
-                return int.Parse(num[0]) - int.Parse(num[1]);
+                var result = int.Parse(num[0]);
+                for (int i = 1; i < num.Length; i++)
+                {
+                    result -= int.Parse(num[i]);
+                }
+                return result;
             }
             
             var number =  s.Split('+');

@@ -48,8 +48,10 @@
     <Compile Include="when_adding_2_and_2.cs" />
     <Compile Include="when_adding_2_and_5.cs" />
     <Compile Include="when_adding_3_4_and_5.cs" />
+    <Compile Include="when_adding_and_subtracting_multiple_number.cs" />
     <Compile Include="when_running_a_test.cs" />
     <Compile Include="when_subtracting_100_from_300.cs" />
+    <Compile Include="when_subtracting_50_and_50_from_200.cs" />
     <Compile Include="when_Subtract_5_from_10.cs" />
   </ItemGroup>
   <ItemGroup>
