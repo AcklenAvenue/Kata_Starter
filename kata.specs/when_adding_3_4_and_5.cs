@@ -12,4 +12,14 @@ namespace kata.specs
         It should_return_12 =
             () => _result.ShouldEqual(12);
     }
+
+    public class when_Subtract_5_from_10 : given_a_calc_context
+    {
+        
+        private Because of = () => { _result = _stringCalculator.Calculate("10-5"); };
+
+        It should_return_5 = () => { _result.ShouldEqual(5); };
+        private static int _result;
+    }
+
 }

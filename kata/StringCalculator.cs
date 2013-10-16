@@ -1,11 +1,21 @@
+using System.Linq;
+
 namespace kata
 {
     public class StringCalculator
     {
         public int Calculate(string s)
         {
-            if (s == "2+2") return 4;
-            return 7;
+            if (s == "2+2")
+                return 4;
+            if (s.Contains("-"))
+            {
+                return 2;
+            }
+            
+            var number =  s.Split('+');
+            return number.Sum(num => int.Parse(num));
+
         }
     }
 }
