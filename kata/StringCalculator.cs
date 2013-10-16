@@ -7,11 +7,13 @@ namespace kata
         public int Calculate(string s)
         {
             if (s == "10-5") return 5;
+            
             if (s == "2+2")
                 return 4;
             if (s.Contains("-"))
             {
-                return 2;
+                var num = s.Split('-');
+                return int.Parse(num[0]) - int.Parse(num[1]);
             }
             
             var number =  s.Split('+');
