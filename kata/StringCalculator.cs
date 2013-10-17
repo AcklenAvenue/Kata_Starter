@@ -1,14 +1,18 @@
-﻿namespace kata
+﻿using System.Linq;
+
+namespace kata
 {
     public class StringCalculator
     {
         public int Calculate(string s)
         {
-            var num = s.Split('+');
-            int sum = int.Parse(num[0]) + int.Parse(num[1]);
-            return sum;
-                
-            return 5;
+            if (s.Contains('-'))
+            {
+                return 0;
+            }
+            var numbersToAdd = s.Split('+');
+            var result = numbersToAdd.Sum(number => int.Parse(number));
+            return result;
         }
     }
 }
