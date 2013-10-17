@@ -1,13 +1,11 @@
 using Machine.Specifications;
-using kata;
 
-class when_adding_5_and_7
+namespace kata.specs
 {
-    static StringCalculator _calculator;
-    static int _result;
-    Establish context = () => { _calculator = new StringCalculator(); };
+    class when_adding_5_and_7 : given_a_string_calcultor_context
+    {
+        Because of = () => { Result = Calculator.Calculate("5+7"); };
 
-    Because of = () => { _result = _calculator.Calculate("5+7"); };
-
-    It should_return_12 = () => _result.ShouldEqual(12);
+        It should_return_12 = () => Result.ShouldEqual(12);
+    }
 }
