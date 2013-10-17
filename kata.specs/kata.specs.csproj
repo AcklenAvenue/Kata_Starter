@@ -48,6 +48,8 @@
     <Compile Include="when_adding_3_and_2.cs" />
     <Compile Include="when_adding_5_and_7.cs" />
     <Compile Include="when_running_a_test.cs" />
+    <Compile Include="when_subtracting_1_and_2_from_10.cs" />
+    <Compile Include="when_subtracting_7_from_10.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\kata\kata.csproj">
