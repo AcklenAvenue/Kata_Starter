@@ -6,21 +6,34 @@ namespace kata
     public class StringCalculator
     {
         public int Calculate(string s)
-        {
-            if (s == "10+20-15") return 0;
-            if (s.Contains("-"))
+        {    
+            var numbers = s.Split('+');
+            var total = 0;
+            foreach (var number in numbers)
             {
-                var valuesToSubstract = s.Split('-');
-                var result = Convert.ToInt32(valuesToSubstract.First());
-                for (var i = 1; i < valuesToSubstract.Length; i++)
+                if (number.Contains("-"))
                 {
-                    result -= Convert.ToInt32(valuesToSubstract[i]);
+                    total = Substract(number, total);
                 }
-                return result;
+                else
+                {
+                    total += Convert.ToInt32(number);
+                }
             }
-            var v = s.Split('+');
 
-            return v.Sum(num => Convert.ToInt32(num));
+            return total;
+        }
+
+        static int Substract(string number, int total)
+        {
+            var valuesToSubstract = number.Split('-');
+            var result = Convert.ToInt32(valuesToSubstract.First());
+            for (var i = 1; i < valuesToSubstract.Length; i++)
+            {
+                result -= Convert.ToInt32(valuesToSubstract[i]);
+            }
+            total += result;
+            return total;
         }
     }
 }
