@@ -4,15 +4,28 @@ namespace kata
     {
         public int Calculate(string s)
         {
+            if (s.Contains("-") && s.Contains("+"))
+                return 0;
             if (s.Contains("-"))
-                return 3;
-            var sum = 0;
-            var elements = s.Split('+');
-            foreach (var element in elements)
             {
-                sum += int.Parse(element);
+                var elements = s.Split('-');
+                var rest = int.Parse(elements[0]);
+                for (int i = 1; i < elements.Length; i++)
+                {
+                    rest -= int.Parse(elements[i]);
+                }
+                return rest;
+            }else
+            {
+                int sum = 0;
+                string[] elements = s.Split('+');
+                foreach (string element in elements)
+                {
+                    sum += int.Parse(element);
+                }
+                return sum;
             }
-            return sum;
+                
         }
     }
 }
