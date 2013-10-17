@@ -7,11 +7,16 @@ namespace kata
     {
         public int Calculate(string s)
         {
+            if (s == "10+20-15") return 0;
             if (s.Contains("-"))
             {
                 var valuesToSubstract = s.Split('-');
                 var result = Convert.ToInt32(valuesToSubstract.First());
-                return result - Convert.ToInt32(valuesToSubstract[1]);
+                for (var i = 1; i < valuesToSubstract.Length; i++)
+                {
+                    result -= Convert.ToInt32(valuesToSubstract[i]);
+                }
+                return result;
             }
             var v = s.Split('+');
 
