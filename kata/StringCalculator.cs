@@ -8,7 +8,8 @@ namespace kata
         {
             if (s.Contains('-'))
             {
-                return 5;
+                var numbersToSubstract = s.Split('-');
+                return int.Parse(numbersToSubstract[0]) - int.Parse(numbersToSubstract[1]);
             }
             var numbersToAdd = s.Split('+');
             var result = numbersToAdd.Sum(number => int.Parse(number));
