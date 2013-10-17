@@ -52,6 +52,7 @@
     <Compile Include="when_substracting_10_from_15.cs" />
     <Compile Include="when_substracting_2_from_3_from_10.cs" />
     <Compile Include="when_subtracting_30_from_15.cs" />
+    <Compile Include="when_sub_and_add_at_the_same_time.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\kata\kata.csproj">
