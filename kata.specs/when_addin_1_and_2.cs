@@ -1,4 +1,5 @@
 ﻿using Machine.Specifications;
+using kata;
 
 namespace kata.specs
 {
