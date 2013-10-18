@@ -1,9 +1,16 @@
+using System.Linq;
+using System.Text.RegularExpressions;
+
 namespace kata
 {
     public class StringCalculator
     {
         public int Calculate(string s)
         {
+            var numbers = Regex.Split(s,@"([-|+][0-9]+)");
+
+            return numbers.Where(number => !number.Equals("")).Sum(number => int.Parse(number));
+
             if (s.Contains("-") && s.Contains("+"))
                 return 0;
             if (s.Contains("-"))
@@ -14,7 +21,7 @@ namespace kata
                 {
                     res -= int.Parse(nums[i]);
                 }
-                return res;
+                return res; 
             }
             if(s.Contains("+"))
             {
