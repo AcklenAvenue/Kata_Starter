@@ -4,8 +4,8 @@
     {
         public int Calculate(string s)
         {
-
-            return 5;
+            var numbers = s.Split('+');
+            return int.Parse(numbers[0]) + int.Parse(numbers[1]);
         }
     }
 }
