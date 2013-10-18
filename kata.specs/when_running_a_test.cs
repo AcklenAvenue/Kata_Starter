@@ -13,3 +13,4 @@ namespace kata.specs
             () => _result.ShouldEqual("HELLO");
     }
 }
+
