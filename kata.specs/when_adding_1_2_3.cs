@@ -1,7 +1,9 @@
 ﻿using Machine.Specifications;
+using kata.specs;
 
 namespace kata.specs
 {
+    
     public class when_adding_1_2_3: given_a_string_calculator_conext
     {
         Because of =
