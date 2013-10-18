@@ -7,7 +7,6 @@ namespace kata
     {
         public int Calculate(string s)
         {
-
             var numbers = s.Split('+');
             var total = 0;
             foreach (var number in numbers)
@@ -27,6 +26,7 @@ namespace kata
         static int Substract(string number, int total)
         {
             var subs = number.Split('-');
+            subs = subs.Where( x => x != "").ToArray();
             var result = Convert.ToInt32(subs.First());
             for (int i = 1; i < subs.Length; i++)
             {
