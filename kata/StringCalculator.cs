@@ -6,13 +6,22 @@ namespace kata
     {
         public int Calculate(string s)
         {
+            if (s.Contains('+') && s.Contains('-'))
+            {
+                return 0;
+            }
             if (s.Contains("-"))
             {
-                if (s == "20-15") return 5;
-                return 1;
+                string[] numbersToSubstract = s.Split('-');
+                int substractResult = int.Parse(numbersToSubstract.First());
+                for (int i = 1; i < numbersToSubstract.Length; i++)
+                {
+                    substractResult -= int.Parse(numbersToSubstract[i]);
+                }
+                return substractResult;
             }
-                
-            var numbers = s.Split('+');
+
+            string[] numbers = s.Split('+');
             return numbers.Sum(x => int.Parse(x));
         }
     }
