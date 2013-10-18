@@ -10,7 +10,12 @@ namespace kata
             if (s.Contains("-"))
             {
                 var numbers = s.Split('-');
-                return Convert.ToInt32(numbers[0]) - Convert.ToInt32(numbers[1]);
+                var result = Convert.ToInt32(numbers.First());
+                for (int i = 1; i < numbers.Length; i++)
+                {
+                    result -= Convert.ToInt32(numbers[i]);
+                }
+                return result;
             }
             var value = s.Split('+');
 
