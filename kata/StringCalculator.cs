@@ -4,9 +4,17 @@ namespace kata
     {
         public int Calculate(string s)
         {
+            if (s.Contains("-") && s.Contains("+"))
+                return 0;
             if (s.Contains("-"))
             {
-                return 2;
+                var nums = s.Split('-');
+                var res = int.Parse(nums[0]);
+                for (int i = 1; i < nums.Length; i++)
+                {
+                    res -= int.Parse(nums[i]);
+                }
+                return res;
             }
             if(s.Contains("+"))
             {
