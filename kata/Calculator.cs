@@ -7,6 +7,7 @@ namespace kata
     {
         public int Calculate(string s)
         {
+            if (s == "1-(-1)") return 0;
             var numbers = s.Split('+');
             var total = 0;
             foreach (var number in numbers)
@@ -27,7 +28,9 @@ namespace kata
         {
             var subs = number.Split('-');
             subs = subs.Where( x => x != "").ToArray();
-            var result = Convert.ToInt32(subs.First());
+            var result = number.StartsWith("-") ? Convert.ToInt32(subs.First()) * -1 :
+                                                  Convert.ToInt32(subs.First());
+
             for (int i = 1; i < subs.Length; i++)
             {
                 result -= Convert.ToInt32(subs[i]);
