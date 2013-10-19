@@ -43,7 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="given_calculator_context.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringCalculator.cs" />
+    <Compile Include="when_adding_3_2.cs" />
+    <Compile Include="when_adding_5_3.cs" />
     <Compile Include="when_running_a_test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
