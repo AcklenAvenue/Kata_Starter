@@ -4,25 +4,32 @@
     {
         public int Calculate(string s)
         {
+            var _result = 0;
             if (s.Contains("-") && s.Contains("+"))
             {
-                return 75;
+                
+                var nums = s.Split('+');
+             
+                foreach (var num in nums)
+                {
+                    if (num.Contains("-"))
+                    {
+                        _result += Resultsub(num);
+                    }
+                    else
+                    {
+                        _result += int.Parse(num);
+                    }
+                }
+                return _result;
+              
             }
 
             if (s.Contains("-"))
             {
-                var numsub = s.Split('-');
-                int resultsub = int.Parse(numsub[0]);
-                for (int i = 1; i < numsub.Length; i++)
-                {
-                    resultsub -= int.Parse(numsub[i]);
-                }
+                var resultsub = Resultsub(s);
                 return resultsub;
-                if (s == "500-200")
-                {
-                    return 300;
-                }
-                return 50; 
+                
             }
 
             int result = 0;
@@ -38,11 +45,21 @@
                 return result;
             }
 
-            if (s.Contains("3+2"))
-                return 5;
+         
 
-            return 8;
+            return _result;
 
+        }
+
+        static int Resultsub(string s)
+        {
+            var numsub = s.Split('-');
+            int resultsub = int.Parse(numsub[0]);
+            for (int i = 1; i < numsub.Length; i++)
+            {
+                resultsub -= int.Parse(numsub[i]);
+            }
+            return resultsub;
         }
     }
 }
