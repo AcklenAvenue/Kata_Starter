@@ -4,8 +4,20 @@
     {
         public int Calculate(string s)
         {
+            if (s.Contains("-") && s.Contains("+"))
+            {
+                return 0;
+            }
+
             if (s.Contains("-"))
             {
+                var numsub = s.Split('-');
+                int resultsub = int.Parse(numsub[0]);
+                for (int i = 1; i < numsub.Length; i++)
+                {
+                    resultsub -= int.Parse(numsub[i]);
+                }
+                return resultsub;
                 if (s == "500-200")
                 {
                     return 300;
