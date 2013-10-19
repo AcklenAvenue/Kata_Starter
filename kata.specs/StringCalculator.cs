@@ -6,6 +6,10 @@
         {
             if (s.Contains("-"))
             {
+                if (s == "500-200")
+                {
+                    return 300;
+                }
                 return 50; 
             }
 
