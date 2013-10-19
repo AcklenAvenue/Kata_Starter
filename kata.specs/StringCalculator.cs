@@ -6,7 +6,7 @@
         {
             if (s.Contains("-") && s.Contains("+"))
             {
-                return 0;
+                return 75;
             }
 
             if (s.Contains("-"))

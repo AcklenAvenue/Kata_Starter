@@ -54,6 +54,7 @@
     <Compile Include="when_subtracting_200_from_500.cs" />
     <Compile Include="when_subtracting_50_from_100.cs" />
     <Compile Include="when_sub_and_add.cs" />
+    <Compile Include="when_sub_and_add_multiple_number.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
