@@ -52,6 +52,7 @@
     <Compile Include="when_subtracting_2_and_5_from_11.cs" />
     <Compile Include="when_subtracting_2_from_5.cs" />
     <Compile Include="when_subtracting_2_from_7.cs" />
+    <Compile Include="when_subtracting_3_from_4_and_adding_2.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\kata\kata.csproj">
