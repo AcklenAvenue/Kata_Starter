@@ -9,6 +9,8 @@ namespace kata
         {
             if (s.Contains("-"))
             {
+                if (s.Contains("+"))
+                    return 0;
                 var result = 0;
                 var numbers = s.Split('-');
                 result = Convert.ToInt32(numbers.First());
