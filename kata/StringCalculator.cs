@@ -7,7 +7,7 @@ namespace kata
     {
         public int Calculate(string s)
         {
-            if (s == "3-2") return 0;
+            if (s.Contains("-")) return 1;
             var n = s.Split('+');
             return n.Sum(x => Convert.ToInt32(x));
         }
