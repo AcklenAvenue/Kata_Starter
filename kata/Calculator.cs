@@ -7,7 +7,10 @@ namespace kata
         public int Calculate(string s)
         {
             if (s.Contains("-"))
-                return 3;
+            {
+                var nums = s.Split('-').Select(c=>Convert.ToInt32(c)).ToArray();
+                return  nums[0]- nums[1];
+            }
             return s.Split('+').Select(c => Convert.ToInt32(c)).Sum(c => c);
         }
     }
