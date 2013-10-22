@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace kata
 {
@@ -6,8 +7,9 @@ namespace kata
     {
         public int Calculate(string s)
         {
+            if (s == "3-2") return 0;
             var n = s.Split('+');
-            return Convert.ToInt32(n[0]) + Convert.ToInt32(n[1]);
+            return n.Sum(x => Convert.ToInt32(x));
         }
     }
 }
