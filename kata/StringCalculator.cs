@@ -1,10 +1,13 @@
-﻿namespace kata
+﻿using System;
+
+namespace kata
 {
     public class StringCalculator
     {
         public int Calculate(string s)
         {
-            return 3;
+            var numbers = s.Split('+');
+            return Convert.ToInt32(numbers[0]) + Convert.ToInt32(numbers[1]);
         }
     }
 }
