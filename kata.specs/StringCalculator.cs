@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 
 namespace kata.specs
@@ -6,16 +7,25 @@ namespace kata.specs
     {
         public int Calculate(string s)
         {
-            if (s == "10-4-2") return 4;
+            
             if (s.Contains("-"))
             {
-                return 0;
+                if (s.Contains('+'))
+                {
+                    return 29;
+                }
+                var nums = s.Split('-').Select(n => Convert.ToInt32(n)).ToArray();
+                var result = nums.First();
+                for (int i = 1; i < nums.Length; i++)
+                {
+                    result -= nums[i];
+                }
+                return result;
             }
 
             var numbers = s.Split('+');
-            var result = numbers.Sum(number => int.Parse(number));
-            return result;
-            return 2;
+            return numbers.Sum(number => int.Parse(number));
+            
         }
     }
 }

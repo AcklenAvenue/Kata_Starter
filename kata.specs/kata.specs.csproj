@@ -52,6 +52,7 @@
     <Compile Include="when_subs_and_add_multiple_numbers.cs" />
     <Compile Include="when_subs_two_numbers.cs" />
     <Compile Include="when_subtracting_2_and_4_from_10.cs" />
+    <Compile Include="when_subtracting_3_from_4_plus_7.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
