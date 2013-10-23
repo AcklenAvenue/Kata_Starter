@@ -7,25 +7,37 @@ namespace kata.specs
     {
         public int Calculate(string s)
         {
-            
-            if (s.Contains("-"))
+            var result = 0;
+            if (s.Contains("+"))
             {
-                if (s.Contains('+'))
+                var numbers = s.Split('+');
+                foreach (var number in numbers)
                 {
-                    return 29;
+                    if (number.Contains('-'))
+                    {
+                        var nums = number.Split('-');
+                        result += Convert.ToInt32(nums.First());
+                        for (int i = 1; i < nums.Length; i++)
+                        {
+                            result -= Convert.ToInt32(nums[i]);
+                        }
+                    }
+                    else
+                    {
+                        result += Convert.ToInt32(number);
+                    }
                 }
-                var nums = s.Split('-').Select(n => Convert.ToInt32(n)).ToArray();
-                var result = nums.First();
+            }
+            else
+            {
+                var nums = s.Split('-');
+                result += Convert.ToInt32(nums.First());
                 for (int i = 1; i < nums.Length; i++)
                 {
-                    result -= nums[i];
+                    result -= Convert.ToInt32(nums[i]);
                 }
-                return result;
             }
-
-            var numbers = s.Split('+');
-            return numbers.Sum(number => int.Parse(number));
-            
+            return result;
         }
     }
 }
