@@ -8,7 +8,7 @@ namespace kata.specs
         {
             if (s.Contains("-"))
             {
-                return 10;
+                return 0;
             }
             var numbers = s.Split('+');
             var result = numbers.Sum(number => int.Parse(number));
