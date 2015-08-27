@@ -1,1 +1,1 @@
-packages/Machine.Specifications.0.5.15/tools/mspec-clr4.exe "kata.specs/bin/Debug/kata.specs.dll"
+packages/Machine.Specifications.Runner.Console.0.9.1/tools/mspec-clr4.exe "kata.specs/bin/Debug/kata.specs.dll"
